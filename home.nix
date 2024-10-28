@@ -35,5 +35,13 @@
     '';
   };
 
+ # direnv hook for bash
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableBashIntegration = true;  # if using bash
+    enableZshIntegration = true;   # if using zsh
+    };
+
   programs.home-manager.enable = true;
 }

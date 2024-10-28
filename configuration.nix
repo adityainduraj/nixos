@@ -125,6 +125,7 @@
     # Development
     vscode
     neovim
+    direnv
     # Development and build essentials
     gcc
     gnumake

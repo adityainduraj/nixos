@@ -30,8 +30,8 @@
       # Explicitly set HOME
       export HOME="${config.home.homeDirectory}"
 
-      # Use a simpler PS1 first to test
-      PS1='[\u@\h:~]\$ '
+      # Use \w for proper path display with tilde
+      PS1='[\u@\h:\w]\$ '
     '';
   };
 

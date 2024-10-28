@@ -107,6 +107,8 @@
     # Basic utilities
     vim
     git
+    gnome.gnome-keyring
+    libsecret
     curl
 
     # GNOME packages
@@ -173,10 +175,9 @@
   systemd.tmpfiles.rules = [
     "d /home/adityainduraj/Sync 0700 adityainduraj users -"
   ];
-
-
-
-
+ 
+  services.gnome.gnome-keyring.enable = true;
+  
   # This value determines the NixOS release
   system.stateVersion = "24.05";
 }

@@ -12,19 +12,19 @@
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
-    
+
     # Configure nixpkgs for both stable and unstable
     nixpkgsConfig = {
       config = {
         allowUnfree = true;
       };
     };
-    
+
     pkgs = import nixpkgs {
       inherit system;
       config = nixpkgsConfig.config;
     };
-    
+
     pkgs-unstable = import nixpkgs-unstable {
       inherit system;
       config = nixpkgsConfig.config;
@@ -33,8 +33,8 @@
      nixosConfigurations = {
         nixos = lib.nixosSystem {
            inherit system;
-           modules = [ 
-             ./configuration.nix
+           modules = [
+             ./nixos/configuration.nix
              { nixpkgs = nixpkgsConfig; }
            ];
            specialArgs = {
@@ -46,8 +46,8 @@
      homeConfigurations = {
         adityainduraj = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ 
-            ./home.nix
+          modules = [
+            ./home/home.nix
             { nixpkgs = nixpkgsConfig; }
           ];
           extraSpecialArgs = {

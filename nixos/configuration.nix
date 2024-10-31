@@ -1,11 +1,13 @@
-# configuration.nix
-
+# .dotfiles/nixos/configuration.nix
 { config, pkgs, pkgs-unstable, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
 
+    # modules import
+    ./modules/bluetooth.nix
+    ./modules/gnome.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -39,8 +41,10 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # Commented these lines are they are there in /modules/gnome.nix
+
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -51,10 +55,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Audio and Bluetooth Configuration
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-
   # PipeWire Configuration
   services.pipewire = {
     enable = true;
@@ -64,28 +64,6 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
-
-  # Enhanced Bluetooth Configuration
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-    package = pkgs.bluez;
-    settings = {
-      General = {
-        Enable = "Source,Sink,Media,Socket";
-        Experimental = true;
-        KernelExperimental = true;
-        FastConnectable = true;
-        MultiProfile = "multiple";
-      };
-      Policy = {
-        AutoEnable = true;
-      };
-    };
-  };
-
-  # Bluetooth management services
-  services.blueman.enable = true;
 
   # Define a user account.
   users.users.adityainduraj = {
@@ -113,11 +91,11 @@
     libsecret
     curl
 
-    # GNOME packages
-    gnome.gnome-tweaks
-    gnome.gnome-bluetooth
-    gnome.gnome-settings-daemon
-    gnome.gnome-control-center
+    # GNOME packages -> moved to ./modules/gnome.nix
+    # gnome.gnome-tweaks
+    # gnome.gnome-bluetooth
+    # gnome.gnome-settings-daemon
+    # gnome.gnome-control-center
 
     (python3.withPackages(ps: with ps; [
         pip
@@ -148,13 +126,7 @@
     papirus-icon-theme
     geist-font
 
-    # System utilities
-    # fastfetch
-
-    # Audio and Bluetooth packages
-    bluez
-    bluez-tools
-    bluez-alsa
+    # Audio packages
     pavucontrol
     pulseaudio-ctl
     wireplumber
@@ -174,20 +146,17 @@
     enable = true;
     user = "adityainduraj";
     group = "users";
-    dataDir = "/home/adityainduraj/Sync";  # Changed to a specific sync directory
+    dataDir = "/home/adityainduraj/Sync";
     configDir = "/home/adityainduraj/.config/syncthing";
     overrideDevices = false;
     overrideFolders = false;
     openDefaultPorts = true;
-    systemService = true;  # Run as system service instead of user service
-   };
+    systemService = true;
+  };
 
   systemd.tmpfiles.rules = [
     "d /home/adityainduraj/Sync 0700 adityainduraj users -"
   ];
-
-  services.gnome.gnome-keyring.enable = true;
-
   # This value determines the NixOS release
   system.stateVersion = "24.05";
 }

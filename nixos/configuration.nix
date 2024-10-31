@@ -3,8 +3,10 @@
 { config, pkgs, pkgs-unstable, ... }:
 
 {
-  imports =
-    [ ./hardware-configuration.nix ];
+  imports = [
+    ./hardware-configuration.nix
+
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -120,12 +122,19 @@
     (python3.withPackages(ps: with ps; [
         pip
         virtualenv
+        tkinter
       ]))
 
     # Development
     vscode
     neovim
     direnv
+
+    # NerdFont
+    jetbrains-mono
+    ibm-plex
+    hack-font
+
     # Development and build essentials
     gcc
     gnumake
@@ -140,7 +149,7 @@
     geist-font
 
     # System utilities
-    fastfetch
+    # fastfetch
 
     # Audio and Bluetooth packages
     bluez
@@ -176,9 +185,9 @@
   systemd.tmpfiles.rules = [
     "d /home/adityainduraj/Sync 0700 adityainduraj users -"
   ];
- 
+
   services.gnome.gnome-keyring.enable = true;
-  
+
   # This value determines the NixOS release
   system.stateVersion = "24.05";
 }

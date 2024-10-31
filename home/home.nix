@@ -15,6 +15,10 @@
     libtool
     patch
     pkg-config
+    fastfetch
+    neofetch
+
+    # fonts
   ] ++ (with pkgs-unstable; [
     # Unstable packages
   ]);

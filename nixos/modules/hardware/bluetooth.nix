@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Audio and Bluetooth Configuration
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-
   # Enhanced Bluetooth Configuration
   hardware.bluetooth = {
     enable = true;

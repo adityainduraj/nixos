@@ -6,6 +6,7 @@
     shellAliases = {
       ll = "ls -l";
       ".." = "cd ..";
+      nix-system-generations = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
     };
 
     initExtra = ''
@@ -17,25 +18,65 @@
 
       # Function for NixOS system cleaning
       clean-nix() {
-        echo "Removing old system generations..."
-        sudo nix-collect-garbage -d
+        # Get the system profile path
+        system_profile="/nix/var/nix/profiles/system"
 
-        echo "Removing old user generations..."
-        nix-collect-garbage -d
+        # Check current number of generations with more explicit counting
+        gen_count=$(ls -l "$system_profile"-*-link 2>/dev/null | wc -l) || {
+          echo "Error: Could not count generations"
+          return 1
+        }
 
-        echo "Running garbage collection..."
-        sudo nix store gc
+        echo "Current system generations: $gen_count"
 
-        echo "Optimizing store..."
-        sudo nix store optimise
+        if [ "$gen_count" -lt 3 ]; then
+          echo "Warning: Only $gen_count generation(s) present. Skipping cleanup to maintain system stability."
+          echo "Proceeding directly to rebuild..."
+        else
+          echo "Found $gen_count generations. Safe to proceed with cleanup."
+
+          # Keep the latest 3 generations by deleting older ones
+          echo "Removing old system generations..."
+          sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +3 || {
+            echo "Error: Failed to clean system generations"
+            return 1
+          }
+
+          echo "Removing old user generations..."
+          nix-env --delete-generations +3 || {
+            echo "Error: Failed to clean user generations"
+            return 1
+          }
+
+          echo "Running garbage collection..."
+          sudo nix store gc || {
+            echo "Error: Failed to run garbage collection"
+            return 1
+          }
+
+          echo "Optimizing store..."
+          sudo nix store optimise || {
+            echo "Error: Failed to optimize store"
+            return 1
+          }
+        fi
 
         echo "Rebuilding system..."
-        sudo nixos-rebuild switch --flake ~/.dotfiles#nixos
+        sudo nixos-rebuild switch --flake ~/.dotfiles#nixos || {
+          echo "Error: System rebuild failed"
+          return 1
+        }
 
         echo "Rebuilding home-manager configuration..."
-        home-manager switch --flake ~/.dotfiles#adityainduraj
+        home-manager switch --flake ~/.dotfiles#adityainduraj || {
+          echo "Error: Home-manager rebuild failed"
+          return 1
+        }
 
-        echo "Cleaning complete!"
+        # Show final generation count
+        final_gen_count=$(ls -l "$system_profile"-*-link 2>/dev/null | wc -l)
+        echo "Final system generations: $final_gen_count"
+        echo "Process complete!"
       }
     '';
   };

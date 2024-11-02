@@ -13,10 +13,10 @@
     jetbrains-mono
     ibm-plex
     hack-font
-    geist-font
+    # geist-font -> moved to unstable
 
     # Theming
-    papirus-icon-theme
+    # papirus-icon-theme -> moved to unstable
     adw-gtk3
   ];
 

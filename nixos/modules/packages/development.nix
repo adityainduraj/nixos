@@ -8,7 +8,6 @@
       tkinter
     ]))
 
-    neovim
     alejandra
 
     # Build essentials

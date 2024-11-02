@@ -6,6 +6,7 @@
 
     # Core
     ./modules/core/boot.nix
+    ./modules/core/flatpak.nix
     ./modules/core/networking.nix
     ./modules/core/nix.nix
     ./modules/core/users.nix

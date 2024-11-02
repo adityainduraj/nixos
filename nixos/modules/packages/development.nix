@@ -10,6 +10,9 @@
 
     alejandra
 
+    # Node and NPM
+    nodejs
+
     # Build essentials
     autoconf
     automake

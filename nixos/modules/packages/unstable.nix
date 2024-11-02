@@ -8,5 +8,6 @@
 
     # theming
     papirus-icon-theme
+    geist-font
   ];
 }

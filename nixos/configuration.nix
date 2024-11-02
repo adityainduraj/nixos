@@ -18,7 +18,7 @@
     # Hardware
     ./modules/hardware/audio.nix
     ./modules/hardware/bluetooth.nix
-    ./modules/hardware/fingerprint.nix
+    # ./modules/hardware/fingerprint.nix -> commenting out
     ./modules/hardware/graphics.nix
 
     # Packages

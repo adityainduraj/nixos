@@ -8,7 +8,9 @@
       tkinter
     ]))
 
-    alejandra
+    # nix setup for code editors
+    alejandra # formatter
+    nixd # nix lsp
 
     # Node and NPM
     nodejs

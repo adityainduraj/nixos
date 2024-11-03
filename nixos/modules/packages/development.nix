@@ -9,8 +9,12 @@
     ]))
 
     # nix setup for code editors
+    unzip
     alejandra # formatter
     nixd # nix lsp
+    marksman # markdown lsp
+    clang-tools # c language lsp
+    stylua
 
     # Node and NPM
     nodejs

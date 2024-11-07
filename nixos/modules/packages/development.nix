@@ -24,7 +24,6 @@
     black
 
     # stuff for academics
-    wireshark-qt
     tcpdump
 
     # Node and NPM

@@ -1,12 +1,15 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
-    (python3.withPackages(ps: with ps; [
-      pip
-      virtualenv
-      tkinter
-    ]))
+    (python3.withPackages (ps:
+      with ps; [
+        pip
+        virtualenv
+        tkinter
+      ]))
 
     # nix setup for code editors
     unzip
@@ -15,6 +18,14 @@
     marksman # markdown lsp
     clang-tools # c language lsp
     stylua
+    pyright
+    ruff-lsp
+    ruff
+    black
+
+    # stuff for academics
+    wireshark-qt
+    tcpdump
 
     # Node and NPM
     nodejs

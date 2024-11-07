@@ -3,8 +3,9 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        -- Add clangd configuration
-        clangd = {},
+        clangd = {
+          cmd = { "/run/current-system/sw/bin/clangd" }  -- Path to NixOS system clangd
+        },
       },
     },
   },

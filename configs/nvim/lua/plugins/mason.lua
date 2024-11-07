@@ -3,19 +3,18 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "shellcheck",  -- Shell script linter
-        "shfmt",      -- Shell formatter
-        "flake8",     -- Python linter
+        "shellcheck",
+        "shfmt",
+        "flake8",
       },
     },
   },
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      automatic_installation = false,  -- Disable automatic installation
+      automatic_installation = false,
       handlers = {
-        -- Explicitly tell mason-lspconfig to skip installing these
-        clangd = function() return true end,
+        clangd = function() return true end,  -- Skip clangd installation
         stylua = function() return true end,
       },
     },

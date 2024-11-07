@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   nix = {
     settings = {
       auto-optimise-store = true;
@@ -9,7 +12,7 @@
 
     # Garbage collection settings
     gc = {
-      automatic = false;  # Disabling automatic time-based GC
+      automatic = false; # Disabling automatic time-based GC
       dates = "never";
       options = "--delete-generations old --profile /nix/var/nix/profiles/system +3";
     };

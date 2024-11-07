@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -9,7 +12,5 @@
 
   # Power management
   powerManagement.enable = true;
-  services.thermald.enable = true;  # For Intel CPUs
-
-
+  services.thermald.enable = true; # For Intel CPUs
 }

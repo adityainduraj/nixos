@@ -1,6 +1,4 @@
-{ config, ... }:
-
-{
+{config, ...}: {
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
@@ -9,11 +7,11 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [
-        22000  # Syncthing transfer
+        22000 # Syncthing transfer
       ];
       allowedUDPPorts = [
-        22000  # Syncthing transfer
-        21027  # Syncthing discovery
+        22000 # Syncthing transfer
+        21027 # Syncthing discovery
       ];
     };
   };

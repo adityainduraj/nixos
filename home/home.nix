@@ -1,13 +1,15 @@
-{ config, pkgs, pkgs-unstable, ... }:
-
 {
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   imports = [
-    ./modules/shell.nix
-    ./modules/vscode.nix
-    ./modules/packages/development.nix
-    ./modules/packages/system.nix
-    ./modules/packages/unstable.nix
-    ./modules/fonts.nix
+    ./modules/desktop
+    ./modules/development
+    ./modules/packages
+    ./modules/services
+    ./modules/shell
   ];
 
   home.username = "adityainduraj";

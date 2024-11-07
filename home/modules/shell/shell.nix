@@ -1,12 +1,17 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.bash = {
     enable = true;
     shellAliases = {
       ll = "ls -l";
       ".." = "cd ..";
       nix-system-generations = "sudo nix-env -p /nix/var/nix/profiles/system --list-generations";
+      nixupdate = "sudo nixos-rebuild switch --flake ~/.dotfiles#nixos";
+      hmupdate = "home-manager switch --flake ~/.dotfiles#adityainduraj";
+      nixclean = "clean-nix";
     };
 
     initExtra = ''

@@ -11,6 +11,8 @@
     curl
     psmisc
 
+    # Workspace
+
     # Fonts
     jetbrains-mono
     ibm-plex

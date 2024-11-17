@@ -18,8 +18,10 @@
   };
 
   # Rest of your existing networking config...
+  # ADJUST TIMEZONE TO YOUR LOCATION
   time.timeZone = "Asia/Kolkata";
 
+  # ADJUST LOCALE TO YOUR PREFERENCE
   i18n = {
     defaultLocale = "en_IN";
     extraLocaleSettings = {

@@ -11,6 +11,7 @@
   # Intel WiFi firmware
   hardware.enableRedistributableFirmware = true;
 
+  # INTEL WIFI SPECIFIC, COMMENT OUT IF NOT ON INTEL
   # Kernel module options for iwlwifi
   boot.extraModprobeConfig = ''
     options iwlwifi power_save=0

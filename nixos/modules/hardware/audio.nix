@@ -6,6 +6,7 @@
   security.rtkit.enable = true;
   hardware.pulseaudio.enable = false;
 
+  # VERIFY IF THESE WORK WITH YOUR AUDIO HARDWARE
   services.pipewire = {
     enable = true;
     alsa.enable = true;

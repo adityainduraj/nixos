@@ -1,5 +1,3 @@
-Yes, you've got it right! Here's a detailed step-by-step guide to reproduce your setup on a new system:
-
 1. **Do Fresh NixOS Installation**
    - Complete the standard NixOS installation
    - Keep the generated `hardware-configuration.nix` from that system

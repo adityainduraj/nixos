@@ -11,5 +11,8 @@
     # theming
     papirus-icon-theme
     geist-font
+
+    # gnome apps 
+    papers
   ];
 }

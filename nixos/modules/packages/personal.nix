@@ -7,5 +7,8 @@
     # personal
     foliate
     shortwave
+
+    # stremio
+    
   ];
 }

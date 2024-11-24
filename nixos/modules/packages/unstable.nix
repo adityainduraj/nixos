@@ -13,6 +13,6 @@
     geist-font
 
     # gnome apps 
-    papers
+    # papers
   ];
 }

@@ -22,9 +22,7 @@
     ruff-lsp
     ruff
     black
-
-    # stuff for academics
-    tcpdump
+    ripgrep
 
     # Node and NPM
     nodejs

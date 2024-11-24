@@ -13,7 +13,6 @@
       [org.gnome.desktop.notifications]
       show-banners=false
 
-
       # You can add more GNOME settings here in the future
     '';
   };

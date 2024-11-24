@@ -12,11 +12,12 @@
     psmisc
 
     # Workspace
+    libreoffice-fresh
 
     # Fonts
     jetbrains-mono
-    ibm-plex
-    hack-font
+    # ibm-plex
+    # hack-font
     # geist-font -> moved to unstable
 
     # Theming

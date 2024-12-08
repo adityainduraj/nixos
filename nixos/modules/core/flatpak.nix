@@ -19,6 +19,6 @@
   # Add required packages
   environment.systemPackages = with pkgs; [
     flatpak
-    gnome.gnome-software # Optional: If you want GNOME Software integration
+    gnome-software # Optional: If you want GNOME Software integration
   ];
 }

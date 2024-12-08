@@ -9,6 +9,5 @@
     shortwave
 
     # stremio
-    
   ];
 }

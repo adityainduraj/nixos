@@ -4,47 +4,44 @@
         "type": "small"
     },
     "display": {
-        "separator": "->   ",
-        "color": {
-            "separator": "red"
-        }
+        "separator": "",
     },
     "modules": [
         {
-            "key": "Distro      ",
+            "key": "Distribution   ",
             "type": "os"
         },
         {
-            "key": "DE          ",
+            "key": "DE             ",
             "type": "de"
         },
         
         {
-            "key": "Terminal    ",
+            "key": "Terminal       ",
             "type": "terminal"
         },
         {
-            "key": "CPU         ",
+            "key": "CPU            ",
             "type": "cpu"
         },
         {
-            "key": "GPU         ",
+            "key": "GPU            ",
             "type": "gpu"
         },
         {
-            "key": "Memory      ",
+            "key": "Memory         ",
             "type": "memory"
         },
         {
-            "key": "Disk        ",
+            "key": "Storage        ",
             "type": "disk"
         },
         {
-            "key": "Battery     ",
+            "key": "Battery        ",
             "type": "battery"
         },
         {
-            "key": "Display     ",
+            "key": "Display        ",
             "type": "display"
         },
         

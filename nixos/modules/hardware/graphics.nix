@@ -4,10 +4,11 @@
   pkgs,
   ...
 }: {
-  hardware.opengl = {
+  # used to be hardware.graphics.enable = true;
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    # driSupport = true; 24.11 depracated
+    # driSupport32Bit = true;
   };
 
   # Power management - INTEL SPECIFIC COMMENT OUT IF NOT ON INTEL

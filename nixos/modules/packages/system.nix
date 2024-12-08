@@ -6,13 +6,13 @@
   environment.systemPackages = with pkgs; [
     vim
     git
-    gnome.gnome-keyring
+    gnome-keyring
     libsecret
     curl
     psmisc
 
     # Workspace
-    libreoffice-fresh
+    # libreoffice-fresh
 
     # Fonts
     jetbrains-mono

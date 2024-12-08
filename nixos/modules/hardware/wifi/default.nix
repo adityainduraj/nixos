@@ -5,7 +5,7 @@
   ...
 }: {
   # Enable wireless support
-  networking.wireless.enable = false;  # Disable wpa_supplicant as we're using NetworkManager
+  networking.wireless.enable = false; # Disable wpa_supplicant as we're using NetworkManager
   networking.networkmanager.wifi.powersave = false;
 
   # Intel WiFi firmware
@@ -22,7 +22,7 @@
   # Add necessary packages
   environment.systemPackages = with pkgs; [
     pciutils
-    iw  # Modern replacement for wireless-tools
+    iw # Modern replacement for wireless-tools
     wireguard-tools
   ];
 }

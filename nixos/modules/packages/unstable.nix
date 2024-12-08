@@ -4,7 +4,6 @@
   ...
 }: {
   environment.systemPackages = with pkgs-unstable; [
-    zed-editor
     neovim
     xclip
 
@@ -12,7 +11,7 @@
     papirus-icon-theme
     geist-font
 
-    # gnome apps 
+    # gnome apps
     # papers
   ];
 }

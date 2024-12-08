@@ -19,9 +19,9 @@
 
   # GNOME-specific packages
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
-    gnome.gnome-bluetooth
-    gnome.gnome-settings-daemon
-    gnome.gnome-control-center
+    gnome-tweaks
+    gnome-bluetooth
+    gnome-settings-daemon
+    gnome-control-center
   ];
 }

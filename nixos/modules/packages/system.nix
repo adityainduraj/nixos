@@ -11,6 +11,9 @@
     curl
     psmisc
 
+    #vm
+    gnome-boxes
+
     # Workspace
     # libreoffice-fresh
 

@@ -43,5 +43,6 @@
     libtool
     patch
     pkg-config
+    gcc
   ];
 }

@@ -11,6 +11,9 @@
     papirus-icon-theme
     geist-font
 
+    # cursors
+    # pkgs.google-cursor
+
     # gnome apps
     # papers
   ];

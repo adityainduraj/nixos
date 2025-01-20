@@ -15,7 +15,7 @@
     zed-editor
 
     # nix tools
-    nix-search-cli
+    # nix-search-cli
 
     # nix setup for code editors
     unzip
@@ -36,6 +36,9 @@
 
     # Node and NPM
     nodejs
+
+    # PCAP Related Stuff
+    mpich
 
     # Build essentials
     autoconf

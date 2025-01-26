@@ -6,8 +6,11 @@
 
 ---@type LazySpec
 return {
-  "AstroNvim/astrocommunity",
-  -- { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.colorscheme.gruvbox-nvim" },
-  -- import/override with your plugins folder
+    "AstroNvim/astrocommunity",
+    -- { import = "astrocommunity.pack.lua" },
+    { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+    { import = "astrocommunity.colorscheme.vscode-nvim" },
+    { import = "astrocommunity.pack.rust" },
+    { import = "astrocommunity.editing-support.copilotchat-nvim" }
+    -- import/override with your plugins folder
 }

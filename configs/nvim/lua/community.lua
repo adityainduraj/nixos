@@ -11,6 +11,8 @@ return {
     { import = "astrocommunity.colorscheme.gruvbox-nvim" },
     { import = "astrocommunity.colorscheme.vscode-nvim" },
     { import = "astrocommunity.pack.rust" },
-    { import = "astrocommunity.editing-support.copilotchat-nvim" }
+    { import = "astrocommunity.editing-support.copilotchat-nvim" },
+    { import = "astrocommunity.code-runner.molten-nvim" },
+    -- { import = "astrocommunity.icon.mini-icons" },
     -- import/override with your plugins folder
 }

@@ -10,6 +10,7 @@
     # theming
     papirus-icon-theme
     geist-font
+    texlivePackages.cm
 
     # cursors
     # pkgs.google-cursor

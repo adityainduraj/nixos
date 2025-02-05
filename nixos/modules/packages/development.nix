@@ -13,6 +13,7 @@
 
     # ide
     zed-editor
+    code-cursor
 
     # nix tools
     # nix-search-cli
@@ -33,12 +34,20 @@
     black
     ripgrep
     lazygit
-
+    pkgs.python312Packages.jupyter-core
+    pkgs.python312Packages.jupyter-client
+    cmake
+    libstdcxx5
+    flex
+    python311Packages.mesa
+    # jupyter-core
     # Node and NPM
     nodejs
 
+    # Rust related stuff
+    rustup
     # PCAP Related Stuff
-    mpich
+    mpi
 
     # Build essentials
     autoconf

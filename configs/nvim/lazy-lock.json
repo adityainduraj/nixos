@@ -3,6 +3,7 @@
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "CopilotChat.nvim": { "branch": "main", "commit": "18d51754e9dc87d6b85f1e331c1fca0825384517" },
   "LuaSnip": { "branch": "master", "commit": "03c8e67eb7293c404845b3982db895d59c0d1538" },
+  "adwaita.nvim": { "branch": "main", "commit": "c9379097755701ab597140bafd097fbaff3dd517" },
   "aerial.nvim": { "branch": "master", "commit": "9c29a1a66eb31384888e413e510ba72496e06770" },
   "alpha-nvim": { "branch": "main", "commit": "de72250e054e5e691b9736ee30db72c65d560771" },
   "astrocommunity": { "branch": "main", "commit": "bb7988ac0efe0c17936c350c6da19051765f0e71" },

@@ -1,0 +1,15 @@
+{
+  "description": "Cursor rules for a Next.js project with an absolutely stunning, modern, and impeccable UI/UX design. Prioritizes a black and white color scheme with an accent color and extraordinary typography.",
+  "rules": {
+    "style": "Use Tailwind CSS for utility-based styling while maintaining a focus on a magnificent and minimal aesthetic. Ensure the black and white theme with accent color is beautifully balanced across the design.",
+    "architecture": "Prioritize a component-based architecture that is efficient yet flexible, allowing for the implementation of breathtaking components. Use React functional components and TypeScript for cohesive and robust design structures.",
+    "ui": {
+      "theme": "Design a delicate yet powerful toggling dark/light theme feature, blending the accent color seamlessly. Prioritize aesthetic cohesion and elegance.",
+      "typography": "Typography must be stellar—elegant, sophisticated, and hierarchically sound. Utilize variable fonts to achieve fluid, harmonious typographic scales. Every letter should add to the beauty and readability.",
+      "microinteractions": "Introduce microinteractions with grace—use CSS transitions, and Framer Motion with discernment to ensure animations are as understated as they are mesmerizing."
+    },
+    "performance": "Employ Next.js's static and server-side rendering strategies to ensure the exceptionally beautiful design is delivered without delay, optimizing images and interactions for an outstanding user experience.",
+    "ux": "The UX layout should be immaculate—command menus, navigation, and elements should be intuitive and exquisite. Conduct rigorous user testing to perpetually enhance the stunning interface.",
+    "accessibility": "Ensure that every aspect of the stunning design remains accessible. Implement ARIA attributes, semantic HTML, and guarantee that UI components are fully accessible, tested thoroughly for elegant keyboard navigation support."
+  }
+}

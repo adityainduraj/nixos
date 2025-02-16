@@ -88,6 +88,8 @@ return {
                 filetypes = {
                     markdown = true,
                     yaml = true,
+                    typescript = true,
+                    javascript = true,
                     ["."] = false,
                 },
             })
@@ -111,6 +113,25 @@ return {
             suggestion = {
                 debounce = 600,
                 throttle = 600,
+            },
+            file_selector = {
+                provider = "telescope", -- or "fzf" if you prefer
+                provider_opts = {},
+            },
+            filetypes = {
+                typescript = true,
+                javascript = true,
+                typescriptreact = true,
+                javascriptreact = true,
+                markdown = true,
+                ["typescript.tsx"] = true,
+                ["javascript.jsx"] = true,
+            },
+            root_patterns = {
+                ".git",
+                "package.json",
+                "tsconfig.json",
+                ".avanterules",
             },
         },
         build = "make",
@@ -139,6 +160,12 @@ return {
                 ft = { "markdown", "Avante" },
             },
         },
+    },
+
+    {
+        "Mofiqul/adwaita.nvim",
+        lazy = false,
+        priority = 1000,
     },
 
 

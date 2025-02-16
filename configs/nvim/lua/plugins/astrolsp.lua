@@ -43,6 +43,8 @@ return {
             "clangd",
             "lua_ls",
             "nixd",
+            "ts_ls",
+            "eslint",
         },
         -- customize language server configuration options passed to `lspconfig`
         ---@diagnostic disable: missing-fields

@@ -10,6 +10,13 @@ return {
             "lua",
             "vim",
             "nix",
+            "typescript",
+            "javascript",
+            "tsx",
+            "json",
+            "yaml",
+            "markdown",
+            "markdown_inline",
             -- add more arguments for adding more treesitter parsers
         },
     },

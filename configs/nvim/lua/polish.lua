@@ -19,3 +19,5 @@ vim.filetype.add {
 -- Solve deletion overwriting clipboard issue, this uses Blackhole registers.
 vim.keymap.set({ 'n', 'v' }, 'd', '"_d') -- Normal/Visual mode deletion
 vim.keymap.set('n', 'x', '"_x')          -- Single-character deletion
+
+-- vim.g.python3_host_prog = '~/.venvs/neovim/bin/python'

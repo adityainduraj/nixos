@@ -12,7 +12,6 @@ return {
     { import = "astrocommunity.colorscheme.vscode-nvim" },
     { import = "astrocommunity.pack.rust" },
     { import = "astrocommunity.editing-support.copilotchat-nvim" },
-    { import = "astrocommunity.code-runner.molten-nvim" },
     { import = "astrocommunity.game.leetcode-nvim" },
     { import = "astrocommunity.colorscheme.miasma-nvim" },
     { import = "astrocommunity.colorscheme.hybrid-nvim" }

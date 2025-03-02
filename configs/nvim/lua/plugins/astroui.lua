@@ -16,7 +16,13 @@ return {
         highlights = {
             init = { -- this table overrides highlights in all themes
                 -- Normal = { bg = "#000000" },
+                -- NotifyBackground = { bg = "#1f1f1f" },
+            },
+            vscode = { -- a table of overrides/changes when applying the astrotheme theme
+                -- Normal = { bg = "#000000" },
                 NotifyBackground = { bg = "#1f1f1f" },
+                -- IndentBlanklineChar = { fg = "#1f1f1f", nocombine = true },
+                NeoTreeIndentMarker = { fg = "#cccccc" },
             },
             astrodark = { -- a table of overrides/changes when applying the astrotheme theme
                 -- Normal = { bg = "#000000" },

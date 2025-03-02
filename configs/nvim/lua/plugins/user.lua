@@ -105,10 +105,10 @@ return {
         opts = {
             provider = "copilot", -- Set Copilot as the provider
             auto_suggestions_provider = "copilot",
-            -- copilot = {
-            --     model = "claude-3.5-sonnet",         -- Set Copilot to use Claude 3.5 Sonnet
-            --     -- max_tokens = 4096,  -- Uncomment if needed
-            -- },
+            copilot = {
+                model = "claude-3.5-sonnet",          -- Set Copilot to use Claude 3.5 Sonnet
+                -- max_tokens = 4096,  -- Uncomment if needed
+            },
             behaviour = {
                 auto_suggestions = false,
                 auto_set_highlight_group = true,
@@ -180,6 +180,7 @@ return {
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
         },
+        -- branch = "revert-disable-sessions",
         opts = {
             lang = "python3",
         },

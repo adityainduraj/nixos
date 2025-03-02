@@ -57,6 +57,7 @@ return {
 
                 -- LeetCode mappings with <Leader>k prefix
                 ["<Leader>k"] = { desc = "LeetCode" },
+                ["<Leader>K"] = { "<cmd>Leet<cr>", desc = "Leetcode Dashboard" },
                 ["<Leader>kc"] = { "<cmd>Leet console<cr>", desc = "Open Console" },
                 ["<Leader>ky"] = { "<cmd>Leet yank<cr>", desc = "Yank Solution" },
                 ["<Leader>kt"] = { "<cmd>Leet tabs<cr>", desc = "Show Open Tabs" },
